@@ -1,0 +1,32 @@
+h1 {
+    padding: 00%;
+
+}
+
+body {
+    color: brown;
+    /* width: 100px;
+    height: 100px; */
+}
+
+p{
+    color: #27b222;
+}
+
+.mydiv{
+    width: 200px;
+    height: 200px;
+    border-radius: 1em;
+    border-width: 1em;
+    border: 2em solid #27b222;
+    background-color: gold;
+    /* outline: 50px; */
+    outline-width: 2em;
+    outline-style: dashed;
+    outline-color: blueviolet;
+    outline-offset: -90px;
+}
+
+.kim{
+    display: block;
+}
