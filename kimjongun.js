@@ -1,4 +1,5 @@
 const yargs = require('yargs');
+const learningaboutjson = require('./learningaboutjson.js');
 
 // Adding a new note
 yargs.command({
@@ -22,34 +23,29 @@ yargs.command({
 
     }
 });
-yargs.parse();
-
-
-
-
-
-
-
-
 
 
 
 
 // Removing a new note
-// yargs.command({
-//     command: "remove",
-//     description: "Remove your note",
-//     showInHelp: true,
-//     builder: {
-//         title: {
-//             description: 'to remove the note ja',
-//             showInHelp: true
-//         }
-//     },
-//     handler: function (argvskld) {
-//         console.log('Removing a new note', argvskld);
-//     }
-// });
+yargs.command({
+    command: "remove",
+    description: "Remove your note",
+    showInHelp: true,
+    builder: {
+        title: {
+            description: 'to remove the note ja',
+            showInHelp: true,
+            demandOption: true,
+            type: 'string'
+        }
+    },
+    handler: function (argvskld) {
+        // console.log('Removing a new note', argvskld);
+        learningaboutjson.removenote(argvskld.title)
+
+    }
+});
 
 
 
@@ -70,3 +66,5 @@ yargs.parse();
 //         console.log('Reading your note');
 //     }
 // }).help.argv;
+
+yargs.parse();
