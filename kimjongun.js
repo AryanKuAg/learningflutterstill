@@ -27,7 +27,7 @@ yargs.command({
 });
 
 
-
+debugger
 
 // Removing a new note
 yargs.command({
